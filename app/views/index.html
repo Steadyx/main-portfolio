@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
-  <title>Kemp Development</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
+    <title>Kemp Development</title>
+  </head>
 
-<body>
+  <body>
 
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Kemp Development</a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="sass.html">Sass</a>
-          </li>
-          <li>
-            <a href="badges.html">Jason</a>
-          </li>
-          <li>
-            <i class="material-icons reorder">add</i>
-          </li>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo left">Kemp Development</a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">skills</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">What Do I know?</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <i class="material-icons hide-on-large-only right dropdown-button" data-activates='dropdown1'>view_headline</i>
+          <ul id='dropdown1' class='dropdown-content right'>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">skills</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">What Do I know?</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="section-one">
+      <div class="col">
+        <h3>Responsive Front-end Development</h3>
+        <ul class="collection skills valign-wrapper">
+
+          <li class="collection-item valign">HTML5</li>
+          <li class="collection-item valign">CSS3</li>
+          <li class="collection-item valign">JavaScript</li>
+          <li class="collection-item valign">Jquery</li>
+
         </ul>
       </div>
-    </nav>
-  </div>
-
-  <div class="section-one">
-    <div class="col">
-      <h1>Kemp Development</h1>
+      
+      <div class="learn-more">
+        <p>
+          Learn More
+        </p>
+        <i class="material-icons">keyboard_arrow_down</i>
+      </div>
     </div>
-  </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+  </body>
 
 </html>
