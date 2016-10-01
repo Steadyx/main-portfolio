@@ -62,7 +62,7 @@ body {
     cursor: pointer;
     z-index: 1000;
     position: relative; }
-    .section-one .learn-more p {
+    .section-one .learn-more a {
       color: white;
       font-size: 1.5em;
       text-shadow: 0 0 10px rgba(18, 18, 18, 0.7);
@@ -85,7 +85,8 @@ body {
       z-index: 100;
       margin-bottom: 1em;
       border-bottom: 2.5px solid white;
-      padding-bottom: 0.5em; }
+      padding-bottom: 0.5em;
+      letter-spacing: 0.1em; }
   .section-one .collection {
     border: none !important;
     display: flex;
@@ -104,13 +105,22 @@ body {
 /*=================/
   End OF SECT ONE
 /==================*/
+.timeline-img, .section-two .timeline .timeline-col:first-child img, .section-two .timeline .timeline-col:nth-child(2) img, .section-two .timeline .timeline-col:nth-child(3) img, .section-two .timeline .timeline-col:nth-child(4) img, .section-two .timeline .timeline-col:nth-child(5) img {
+  width: 600px;
+  height: 600px;
+  border: 5px solid #e4684c;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 100%; }
+
 .section-two {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2em; }
+  padding: 2em;
+  box-shadow: 0 -5px 5px -5px #333; }
   .section-two .col {
     display: flex;
     justify-content: center;
@@ -119,14 +129,67 @@ body {
     .section-two .col .title h3 {
       text-align: center;
       border-bottom: 1px solid black;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      letter-spacing: 0.2em;
+      text-align: center; }
     .section-two .col p {
-      width: 50%;
-      font-size: 1.2em; }
+      width: 75%;
+      font-size: 1.2em;
+      line-height: 2em; }
+  .section-two .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .section-two .timeline .timeline-col {
+      text-align: center; }
+      .section-two .timeline .timeline-col .title {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .section-two .timeline .timeline-col .title p {
+          border-bottom: 1px solid black;
+          width: 20%; }
+    .section-two .timeline .timeline-col:first-child {
+      align-self: flex-start; }
+    .section-two .timeline .timeline-col:nth-child(2) {
+      align-self: flex-end; }
+    .section-two .timeline .timeline-col:nth-child(3) {
+      align-self: flex-start; }
+      .section-two .timeline .timeline-col:nth-child(3) img {
+        object-position: center; }
+    .section-two .timeline .timeline-col:nth-child(4) {
+      align-self: flex-end; }
+      .section-two .timeline .timeline-col:nth-child(4) img {
+        object-position: bottom; }
+    .section-two .timeline .timeline-col:nth-child(5) {
+      align-self: flex-start; }
+      .section-two .timeline .timeline-col:nth-child(5) img {
+        object-position: center; }
 
 /*================/
     MEDIA QUERIES
 /================*/
+@media (max-width: 1240px) {
+  .section-one .col h3 {
+    letter-spacing: none;
+    font-size: 2.5em; }
+  .timeline-img, .section-two .timeline .timeline-col:first-child img, .section-two .timeline .timeline-col:nth-child(2) img, .section-two .timeline .timeline-col:nth-child(3) img, .section-two .timeline .timeline-col:nth-child(4) img, .section-two .timeline .timeline-col:nth-child(5) img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2px solid #e4684c; }
+  .section-two .timeline {
+    width: 100%; }
+    .section-two .timeline .timeline-col {
+      text-align: center;
+      align-self: center; }
+      .section-two .timeline .timeline-col p {
+        border-bottom: 1px solid black;
+        width: 20%; } }
+
 @media (max-width: 640px) {
   .nav-wrapper .brand-logo {
     font-size: 1.5rem; }
@@ -148,8 +211,16 @@ body {
     width: 75%;
     font-size: 1.2em; }
   .section-two .col p {
-    width: 95%;
-    font-size: 1em; } }
+    width: 100%;
+    font-size: 1em; }
+  .timeline-img, .section-two .timeline .timeline-col:first-child img, .section-two .timeline .timeline-col:nth-child(2) img, .section-two .timeline .timeline-col:nth-child(3) img, .section-two .timeline .timeline-col:nth-child(4) img, .section-two .timeline .timeline-col:nth-child(5) img {
+    width: 65%;
+    height: 65%; }
+  .timeline-col {
+    text-align: center;
+    align-self: center; }
+    .timeline-col p {
+      border-bottom: 1px solid black; } }
 
 @media (max-width: 375px) {
   .section-one .col h3 {

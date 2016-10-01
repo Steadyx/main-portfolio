@@ -68,7 +68,7 @@ body {
     cursor: pointer;
     z-index: 1000;
     position: relative;
-    p {
+    a {
       color: white;
       font-size: 1.5em;
       text-shadow: 0 0 10px rgba(18, 18, 18, 0.7);
@@ -95,6 +95,7 @@ body {
       margin-bottom: 1em;
       border-bottom: 2.5px solid white;
       padding-bottom: 0.5em;
+      letter-spacing: 0.1em;
     }
   }
   .collection {
@@ -117,6 +118,14 @@ body {
 /*=================/
   End OF SECT ONE
 /==================*/
+.timeline-img {
+  width: 600px;
+  height: 600px;
+  border: 5px solid rgb(228, 104, 76);
+  object-fit: cover;
+  object-position: right;
+  border-radius: 100%;
+}
 .section-two {
   width: 100%;
   display: flex;
@@ -124,6 +133,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2em;
+  box-shadow: 0 -5px 5px -5px #333;
   .col {
     display: flex;
     justify-content: center;
@@ -134,91 +144,186 @@ body {
         text-align: center;
         border-bottom: 1px solid black;
         margin-bottom: 1em;
+        letter-spacing: 0.2em;
+        text-align: center;
       }
     }
     p {
-      width: 50%;
+      width: 75%;
       font-size: 1.2em;
+      line-height: 2em;
     }
   }
-}
-/*================/
-    MEDIA QUERIES
-/================*/
-@media (max-width: 640px) {
-  .nav-wrapper {
-    .brand-logo {
-      font-size: 1.5rem;
-    }
-    i {
-      display: inherit;
-      visibility: visible;
-      margin-right: 1em !important;
-    }
-  }
-  .section-one {
-    .col {
-      h3 {
-        font-size: 1.6em;
-      }
-    }
-    .collection {
-      .collection-item {
-        height: 70px;
-        width: 70px;
-        padding: 1em !important;
-        font-size: 1em;
-        margin: 0 0.5em !important;
-      }
-    }
-    .learn-more {
-      p {
-        font-size: 0.8em;
-      }
-      i {}
-    }
-  }
-  .section-two {
-    .section-two {
-      .col {
+  .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .timeline-col {
+      text-align: center;
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         p {
-          width: 75%;
-          font-size: 1.2em;
+          border-bottom: 1px solid black;
+          width: 20%;
+        }
+      }
+      .timeline-col:first-child {
+        align-self: flex-start;
+        img {
+          @extend .timeline-img;
+        }
+      }
+      .timeline-col:nth-child(2) {
+        align-self: flex-end;
+        img {
+          @extend .timeline-img;
+        }
+      }
+      .timeline-col:nth-child(3) {
+        align-self: flex-start;
+        img {
+          @extend .timeline-img;
+          object-position: center;
+        }
+      }
+      .timeline-col:nth-child(4) {
+        align-self: flex-end;
+        img {
+          @extend .timeline-img;
+          object-position: bottom;
+        }
+      }
+      .timeline-col:nth-child(5) {
+        align-self: flex-start;
+        img {
+          @extend .timeline-img;
+          object-position: center;
         }
       }
     }
   }
-  .section-two {
-    .col {
-      .title {
-        h3 {}
+  /*================/
+    MEDIA QUERIES
+/================*/
+  @media (max-width: 1240px) {
+    .section-one {
+      .col {
+        h3 {
+          letter-spacing: none;
+          font-size: 2.5em;
+        }
       }
-      p {
-        width: 95%;
-        font-size: 1em;
+    }
+    .timeline-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      border: 2px solid rgb(228, 104, 76);
+    }
+    .section-two {
+      .timeline {
+        width: 100%;
+        .timeline-col {
+          text-align: center;
+          align-self: center;
+          p {
+            border-bottom: 1px solid black;
+            width: 20%;
+          }
+        }
       }
     }
   }
-}
-@media (max-width: 375px) {
-  .section-one {
-    .col {
-      h3 {
-        font-size: 1.2em;
+  @media (max-width: 640px) {
+    .nav-wrapper {
+      .brand-logo {
+        font-size: 1.5rem;
+      }
+      i {
+        display: inherit;
+        visibility: visible;
+        margin-right: 1em !important;
       }
     }
-    .collection {
-      .collection-item {
-        height: 60px;
-        width: 60px;
-        padding: 1em !important;
-        font-size: 0.8em;
+    .section-one {
+      .col {
+        h3 {
+          font-size: 1.6em;
+        }
+      }
+      .collection {
+        .collection-item {
+          height: 70px;
+          width: 70px;
+          padding: 1em !important;
+          font-size: 1em;
+          margin: 0 0.5em !important;
+        }
+      }
+      .learn-more {
+        p {
+          font-size: 0.8em;
+        }
+        i {}
       }
     }
-    .learn-more {
+    .section-two {
+      .section-two {
+        .col {
+          p {
+            width: 75%;
+            font-size: 1.2em;
+          }
+        }
+      }
+    }
+    .section-two {
+      .col {
+        .title {
+          h3 {}
+        }
+        p {
+          width: 100%;
+          font-size: 1em;
+        }
+      }
+    }
+    .timeline-img {
+      width: 65%;
+      height: 65%;
+    }
+    .timeline-col {
+      text-align: center;
+      align-self: center;
       p {
-        font-size: 1em;
+        border-bottom: 1px solid black;
       }
     }
   }
-}
+  @media (max-width: 375px) {
+    .section-one {
+      .col {
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+      .collection {
+        .collection-item {
+          height: 60px;
+          width: 60px;
+          padding: 1em !important;
+          font-size: 0.8em;
+        }
+      }
+      .learn-more {
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
