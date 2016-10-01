@@ -33,6 +33,9 @@ body {
     .dropdown-content li:last-child {
       border: none; }
 
+/*=================/
+  End OF NAVIGATION
+/==================*/
 .section-one {
   height: 100vh;
   width: 100%;
@@ -41,75 +44,85 @@ body {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("../images/ocean.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   z-index: 100; }
-
-.learn-more {
-  text-align: center;
-  width: 20%;
-  border-radius: .5em;
-  cursor: pointer;
-  z-index: 1000;
-  position: relative; }
-  .learn-more:before {
+  .section-one:before {
     content: '';
-    position: absolute;
     width: 100%;
     height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    transition: .5s ease;
-    transform: translateY("-100px"); }
-  .learn-more:hover:before {
-    background-color: rgba(228, 104, 76, 0.4); }
-  .learn-more p {
-    color: white;
-    font-size: 1em; }
-  .learn-more i {
-    color: white;
-    z-index: 100;
-    font-size: 3vw !important; }
-
-.section-one:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(10, 10, 10, 0.2); }
-
-.col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  flex: 1; }
-  .col h3 {
-    color: white;
-    text-shadow: 0 0 10px rgba(18, 18, 18, 0.7);
-    z-index: 100;
-    margin-bottom: 1em;
-    border-bottom: 2.5px solid white;
-    padding-bottom: .5em; }
-
-.collection {
-  border: none !important;
-  display: flex;
-  flex-wrap: wrap; }
-  .collection li {
-    margin: 0 1.5em !important;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    display: flex !important;
+    background-color: rgba(10, 10, 10, 0.2); }
+  .section-one .learn-more {
+    text-align: center;
+    border-radius: 0.5em;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative; }
+    .section-one .learn-more p {
+      color: white;
+      font-size: 1.5em;
+      text-shadow: 0 0 10px rgba(18, 18, 18, 0.7);
+      margin: 0; }
+    .section-one .learn-more i {
+      color: white;
+      z-index: 100;
+      font-size: 4em !important;
+      text-shadow: 0 0 10px rgba(18, 18, 18, 0.7); }
+  .section-one .col {
+    display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px rgba(10, 10, 10, 0.5); }
+    flex-direction: column;
+    text-align: center;
+    flex: 1; }
+    .section-one .col h3 {
+      color: white;
+      text-shadow: 0 0 10px rgba(18, 18, 18, 0.7);
+      z-index: 100;
+      margin-bottom: 1em;
+      border-bottom: 2.5px solid white;
+      padding-bottom: 0.5em; }
+  .section-one .collection {
+    border: none !important;
+    display: flex;
+    flex-wrap: wrap; }
+    .section-one .collection .collection-item {
+      margin: 0 1.5em !important;
+      height: 100px;
+      width: 100px;
+      border-radius: 90%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+      border: 1px solid black; }
+
+/*=================/
+  End OF SECT ONE
+/==================*/
+.section-two {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em; }
+  .section-two .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .section-two .col .title h3 {
+      text-align: center;
+      border-bottom: 1px solid black;
+      margin-bottom: 1em; }
+    .section-two .col p {
+      width: 50%;
+      font-size: 1.2em; }
 
 /*================/
     MEDIA QUERIES
@@ -121,9 +134,30 @@ body {
     display: inherit;
     visibility: visible;
     margin-right: 1em !important; }
-  .col h3 {
-    font-size: 2em; }
-  .collection li {
+  .section-one .col h3 {
+    font-size: 1.6em; }
+  .section-one .collection .collection-item {
+    height: 70px;
+    width: 70px;
+    padding: 1em !important;
+    font-size: 1em;
+    margin: 0 0.5em !important; }
+  .section-one .learn-more p {
+    font-size: 0.8em; }
+  .section-two .section-two .col p {
+    width: 75%;
+    font-size: 1.2em; }
+  .section-two .col p {
+    width: 95%;
+    font-size: 1em; } }
+
+@media (max-width: 375px) {
+  .section-one .col h3 {
+    font-size: 1.2em; }
+  .section-one .collection .collection-item {
     height: 60px;
     width: 60px;
-    font-size: 0.8em; } }
+    padding: 1em !important;
+    font-size: 0.8em; }
+  .section-one .learn-more p {
+    font-size: 1em; } }
