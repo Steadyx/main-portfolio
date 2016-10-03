@@ -105,8 +105,8 @@ body {
     flex-wrap: wrap;
     .collection-item {
       margin: 0 1.5em !important;
-      height: 150px;
-      width: 150px;
+      height: 130px;
+      width: 130px;
       border-radius: 90%;
       display: flex!important;
       justify-content: center;
@@ -210,6 +210,7 @@ body {
         align-items: center;
         text-align: center;
         font-size: 1.2em;
+
         p {
           border-bottom: 1px solid black;
         }
@@ -218,13 +219,13 @@ body {
   }
 }
 /*=================/
-  End OF SECT Two
+  End of Sect Two
 /==================*/
 .section-three {
   padding: 5em;
-  @extend .section-two;
   background-color: rgb(228, 104, 76);
   color: black;
+  @extend .section-two;
   *.skill-set {
     @extend .timeline;
     justify-content: center;
@@ -267,8 +268,95 @@ body {
     font-size: 1.2em;
     border-bottom: 1px solid black;
     align-self: flex-start;
+
     p {
       text-align: center;
+    }
+  }
+}
+/*=================/
+  End OF SECT THREE
+/==================*/
+.section-four {
+  @extend .section-two;
+  padding: 0 !important;
+  .col {
+    @extend .col;
+    padding: 0 !important;
+    .title{
+      h3{
+        padding: 1em 0;
+      }
+    }
+    .webpage-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+      .webpage {
+        flex: 1 0 40%;
+        height: auto;
+        position: relative;
+        a {
+          color: white;
+        }
+        img {
+          width: 100%;
+        }
+        .overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          transition: 0.5s ease;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          background-color: rgba(18, 18, 18, 0.2);
+          flex-direction: column;
+          transition: .5s ease;
+          &:hover{
+            background-color: rgba(14, 14, 14, 0.8);
+            .overlay-title{
+              transform: translateY(-100%);
+            }
+            .subtitle{
+              transform: translateY(-100%);
+            }
+          }
+          .overlay-title{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+            text-align: center;
+            transition: .5s ease;
+
+            p{
+              text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+              font-size: 1.5em;
+              width: 25%;
+              border-bottom: 1px solid white;
+
+            }
+          }
+          .subtitle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .6s ease;
+
+            p{
+              text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+              font-size: 1.3em;
+
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -289,7 +377,7 @@ body {
     height: 300px;
     border-radius: 100%;
     border: 2px solid rgb(228, 104, 76);
-    margin: 0 .5em;
+    margin: 0 0.5em;
   }
   .section-two {
     .timeline {
