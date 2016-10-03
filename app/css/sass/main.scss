@@ -188,6 +188,7 @@ body {
         margin-bottom: 1em;
         letter-spacing: 0.2em;
         text-align: center;
+        padding: 1em 0;
       }
     }
     p {
@@ -279,13 +280,16 @@ body {
 /==================*/
 .section-four {
   @extend .section-two;
-  padding: 0 !important;
+  padding:0 !important;
   .col {
     @extend .col;
     padding: 0 !important;
     .title{
+      background-color: rgb(34, 34, 34);
       h3{
         padding: 1em 0;
+        color: white;
+        border-bottom: 1px solid white;
       }
     }
     .webpage-row {
@@ -360,6 +364,23 @@ body {
     }
   }
 }
+/*================/
+  END OF SECT FOUR
+/================*/
+
+.section-five{
+  @extend .section-three;
+  .col{
+    @extend .col;
+    .title{
+      h3{
+        padding: 1em 0;
+      }
+    }
+  }
+
+}
+
 /*================/
     MEDIA QUERIES
 /================*/

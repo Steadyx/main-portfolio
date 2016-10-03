@@ -131,32 +131,32 @@ body {
   border-radius: 100%;
   margin: 0 2em; }
 
-.section-two, .section-three, .section-four {
+.section-two, .section-three, .section-five, .section-four {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 4.5em; }
-  .section-two .col, .section-three .col, .section-four .col {
+  .section-two .col, .section-three .col, .section-four .col, .section-five .col {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 5em; }
-    .section-two .col .title, .section-three .col .title, .section-four .col .title {
+    .section-two .col .title, .section-three .col .title, .section-four .col .title, .section-five .col .title {
       display: flex;
       width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .section-two .col .title .img-shadow, .section-three .col .title .img-shadow, .section-four .col .title .img-shadow {
+      .section-two .col .title .img-shadow, .section-three .col .title .img-shadow, .section-four .col .title .img-shadow, .section-five .col .title .img-shadow {
         position: relative;
         width: 500px;
         height: 500px;
         border-radius: 100%;
         box-shadow: inset 0 0 49px -6px rgba(0, 0, 0, 0.56); }
-        .section-two .col .title .img-shadow img, .section-three .col .title .img-shadow img, .section-four .col .title .img-shadow img {
+        .section-two .col .title .img-shadow img, .section-three .col .title .img-shadow img, .section-four .col .title .img-shadow img, .section-five .col .title .img-shadow img {
           width: 500px;
           height: 500px;
           border-radius: 100%;
@@ -165,41 +165,42 @@ body {
           display: block;
           z-index: -1;
           position: relative; }
-      .section-two .col .title h3, .section-three .col .title h3, .section-four .col .title h3 {
+      .section-two .col .title h3, .section-three .col .title h3, .section-four .col .title h3, .section-five .col .title h3 {
         text-align: center;
         border-bottom: 1px solid black;
         margin-bottom: 1em;
         letter-spacing: 0.2em;
-        text-align: center; }
-    .section-two .col p, .section-three .col p, .section-four .col p {
+        text-align: center;
+        padding: 1em 0; }
+    .section-two .col p, .section-three .col p, .section-four .col p, .section-five .col p {
       width: 75%;
       font-size: 1.2em;
       line-height: 2em; }
-  .section-two .timeline, .section-three .timeline, .section-four .timeline, .section-three *.skill-set {
+  .section-two .timeline, .section-three .timeline, .section-five .timeline, .section-four .timeline, .section-three *.skill-set, .section-five *.skill-set {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 90%;
     flex-wrap: wrap; }
-    .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col {
+    .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-five .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col, .section-five *.skill-set .timeline-col {
       text-align: center; }
-      .section-two .timeline .timeline-col .title, .section-three .timeline .timeline-col .title, .section-four .timeline .timeline-col .title, .section-three *.skill-set .timeline-col .title {
+      .section-two .timeline .timeline-col .title, .section-three .timeline .timeline-col .title, .section-five .timeline .timeline-col .title, .section-four .timeline .timeline-col .title, .section-three *.skill-set .timeline-col .title, .section-five *.skill-set .timeline-col .title {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         font-size: 1.2em; }
-        .section-two .timeline .timeline-col .title p, .section-three .timeline .timeline-col .title p, .section-four .timeline .timeline-col .title p, .section-three *.skill-set .timeline-col .title p {
+        .section-two .timeline .timeline-col .title p, .section-three .timeline .timeline-col .title p, .section-five .timeline .timeline-col .title p, .section-four .timeline .timeline-col .title p, .section-three *.skill-set .timeline-col .title p, .section-five *.skill-set .timeline-col .title p {
           border-bottom: 1px solid black; }
 
 /*=================/
   End of Sect Two
 /==================*/
-.section-three {
+.section-three, .section-five {
   padding: 5em;
   background-color: #e4684c;
   color: black; }
-  .section-three *.skill-set {
+  .section-three *.skill-set, .section-five *.skill-set {
     justify-content: center; }
 
 *.skills-col {
@@ -244,8 +245,12 @@ body {
   padding: 0 !important; }
   .section-four .col {
     padding: 0 !important; }
-    .section-four .col .title h3 {
-      padding: 1em 0; }
+    .section-four .col .title {
+      background-color: #222222; }
+      .section-four .col .title h3 {
+        padding: 1em 0;
+        color: white;
+        border-bottom: 1px solid white; }
     .section-four .col .webpage-row {
       display: flex;
       flex-wrap: wrap;
@@ -302,6 +307,12 @@ body {
               font-size: 1.3em; }
 
 /*================/
+  END OF SECT FOUR
+/================*/
+.section-five .col .title h3 {
+  padding: 1em 0; }
+
+/*================/
     MEDIA QUERIES
 /================*/
 @media (max-width: 1240px) {
@@ -314,13 +325,13 @@ body {
     border-radius: 100%;
     border: 2px solid #e4684c;
     margin: 0 0.5em; }
-  .section-two .timeline, .section-three .timeline, .section-four .timeline, .section-three *.skill-set {
+  .section-two .timeline, .section-three .timeline, .section-five .timeline, .section-four .timeline, .section-three *.skill-set, .section-five *.skill-set {
     width: 100%;
     justify-content: space-around; }
-    .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col {
+    .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-five .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col, .section-five *.skill-set .timeline-col {
       text-align: center;
       align-self: center; }
-      .section-two .timeline .timeline-col p, .section-three .timeline .timeline-col p, .section-four .timeline .timeline-col p, .section-three *.skill-set .timeline-col p {
+      .section-two .timeline .timeline-col p, .section-three .timeline .timeline-col p, .section-five .timeline .timeline-col p, .section-four .timeline .timeline-col p, .section-three *.skill-set .timeline-col p, .section-five *.skill-set .timeline-col p {
         border-bottom: 1px solid black; }
   .col .img-shadow {
     width: 350px !important;
@@ -377,10 +388,10 @@ body {
     margin: 0 0.5em !important; }
   .section-one .learn-more p {
     font-size: 0.8em; }
-  .section-two .section-two .col p, .section-three .section-two .col p, .section-two .section-three .col p, .section-three .section-three .col p, .section-four .section-two .col p, .section-four .section-three .col p, .section-two .section-four .col p, .section-three .section-four .col p, .section-four .section-four .col p {
+  .section-two .section-two .col p, .section-three .section-two .col p, .section-two .section-three .col p, .section-three .section-three .col p, .section-four .section-two .col p, .section-four .section-three .col p, .section-two .section-four .col p, .section-three .section-four .col p, .section-four .section-four .col p, .section-five .section-two .col p, .section-five .section-three .col p, .section-two .section-five .col p, .section-three .section-five .col p, .section-five .section-five .col p, .section-four .section-five .col p, .section-five .section-four .col p {
     width: 75%;
     font-size: 1.2em; }
-  .section-two .col p, .section-three .col p, .section-four .col p {
+  .section-two .col p, .section-three .col p, .section-four .col p, .section-five .col p {
     width: 90%;
     font-size: 1em; }
   .timeline-img {
@@ -393,7 +404,7 @@ body {
     align-self: center; }
     .timeline-col p {
       border-bottom: 1px solid black; }
-  .section-three h3 {
+  .section-three h3, .section-five h3 {
     font-size: 1.3em; } }
 
 @media (max-width: 375px) {
@@ -406,10 +417,10 @@ body {
     font-size: 0.7em; }
   .section-one .learn-more p {
     font-size: 1em; }
-  .section-two .col .img-shadow, .section-three .col .img-shadow, .section-four .col .img-shadow {
+  .section-two .col .img-shadow, .section-three .col .img-shadow, .section-four .col .img-shadow, .section-five .col .img-shadow {
     width: 310px !important;
     height: 310px !important; }
-    .section-two .col .img-shadow img, .section-three .col .img-shadow img, .section-four .col .img-shadow img {
+    .section-two .col .img-shadow img, .section-three .col .img-shadow img, .section-four .col .img-shadow img, .section-five .col .img-shadow img {
       width: 310px !important;
       height: 310px !important; }
   .timeline-img {
