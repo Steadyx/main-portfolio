@@ -285,11 +285,9 @@ body {
     @extend .col;
     padding: 0 !important;
     .title{
-      background-color: rgb(34, 34, 34);
       h3{
         padding: 1em 0;
-        color: white;
-        border-bottom: 1px solid white;
+
       }
     }
     .webpage-row {
@@ -326,7 +324,7 @@ body {
               transform: translateY(-100%);
             }
             .subtitle{
-              transform: translateY(-100%);
+              transform: translateY(-80%);
             }
           }
           .overlay-title{
@@ -375,6 +373,41 @@ body {
     .title{
       h3{
         padding: 1em 0;
+      }
+    }
+    .form{
+      input, textarea{
+        font-size: 1.5em;
+        margin: 2em 0;
+        color: black;
+      }
+      textarea{
+        resize: none;
+        height: 200px;
+      }
+    }
+    .social-row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2.5em;
+      width: 100%;
+      .social-col{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 50%;
+          cursor: pointer;
+          &:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            border-radius: 100%;
+            border: 2.5px solid rgba(89, 232, 200, 0.95);
+            transform: scale(1.1);
+            transition: .5s ease;
+          }
+        }
       }
     }
   }
