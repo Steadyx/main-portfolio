@@ -24,14 +24,21 @@ app.get('/', function(req, res, next) {
 })
 
 app.post('/', function(req, res, next) {
+
+  var mailOption,
+    smtpTransfer;
+
+
   var data = {
+    name: req.body.name,
     email: req.body.email,
     subject: req.body.subject,
     message: req.body.message
   };
-  console.log(data.message)
 
-  var transporter = nodemailer.createTransport({
+  console.log(data)
+
+  var smtpTransfer = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
       user: process.env.EMAIL_SECRET,
@@ -39,8 +46,8 @@ app.post('/', function(req, res, next) {
     }
   });
 
-  var mailOptions = {
-    from: data.email,
+  mailOptions = {
+    from: data.name + ' &lt;' + data.email + '&gt;',
     to: process.env.EMAIL_SECRET,
     subject: data.subject,
     message: data.message,
@@ -49,15 +56,13 @@ app.post('/', function(req, res, next) {
               Heres what they have to say <br><strong>' + data.message + ' \
               </strong><p>'
   }
-  transporter.sendMail(mailOptions, function(err, info) {
-    if (err) {
-      console.log(err);
-      res.redirect('/')
+  smtpTransfer.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
     } else {
-      console.log('Message Sent ' + info.response)
+      console.log('Message sent: ' + info.response);
     }
   })
-  console.log('hiii');
 })
 
 app.listen(port, function() {
