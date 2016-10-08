@@ -359,8 +359,10 @@ body {
 /================*/
 .section-five {
   @extend .section-three;
+  padding: 0;
   .col {
     @extend .col;
+    padding-bottom: 1em;
     .title {
       h3 {
         padding: 1em 0;
@@ -395,16 +397,12 @@ body {
       justify-content: center;
       align-items: center;
       width: 100%;
-      padding-top: 5em;
       .social-col {
         display: flex;
         justify-content: center;
         align-items: center;
-        a h5 {
-          font-size: 1em !important;
-        }
         img {
-          width: 35%;
+          width: 25%;
           cursor: pointer;
           transition: 0.5s ease;
           &:hover {
@@ -413,6 +411,19 @@ body {
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+  .email {
+    padding-bottom: 1em;
+    a h5 {
+      font-size: 2em;
+      color: black;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        border: 1px solid white;
+        border-radius: 2.5em;
+        padding: 0.5em;
       }
     }
   }
@@ -611,8 +622,9 @@ body {
     }
   }
   .section-three {
+    padding: 2.5em;
     h3 {
-      font-size: 1.3em;
+      font-size: 2em;
     }
   }
   .overlay {
@@ -676,27 +688,37 @@ body {
     height: 250px;
     margin: 0;
   }
-  .social-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 5em;
-    .social-col {
+  .section-four {
+    .col {
+      .title {
+        h3 {
+          font-size: 2em !important;
+        }
+      }
+    }
+  }
+  .section-five {
+    a h5 {
+      font-size: 0.8em !important;
+    }
+    .social-row {
       display: flex;
       justify-content: center;
       align-items: center;
-       h5 {
-        font-size: .4rem !important;
-      }
-      img {
-        width: 35%;
-        cursor: pointer;
-        transition: 0.5s ease;
-        &:hover {
-          box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-          border-radius: 100%;
-          transform: scale(1.1);
+      width: 100%;
+      .social-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 35%;
+          cursor: pointer;
+          transition: 0.5s ease;
+          &:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            border-radius: 100%;
+            transform: scale(1.1);
+          }
         }
       }
     }

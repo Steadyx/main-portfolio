@@ -304,49 +304,56 @@ body {
 /*================/
   END OF SECT FOUR
 /================*/
-.section-five .col .title h3 {
-  padding: 1em 0; }
-
-.section-five .col .form input, .section-five .col .form textarea {
-  font-size: 1.5em;
-  margin: 2em 0;
-  color: black; }
-
-.section-five .col .form textarea {
-  resize: none;
-  height: 200px; }
-
-.section-five .col .form button {
-  border: 1px solid white;
-  background-color: inherit;
-  color: white;
-  padding: 0.5em 3em;
-  font-size: 1.5em;
-  transition: 0.5s ease; }
-  .section-five .col .form button:hover {
-    background-color: rgba(89, 232, 200, 0.95);
-    color: black; }
-
-.section-five .col .social-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 5em; }
-  .section-five .col .social-row .social-col {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-five .col .social-row .social-col a h5 {
-      font-size: 1em !important; }
-    .section-five .col .social-row .social-col img {
-      width: 35%;
-      cursor: pointer;
+.section-five {
+  padding: 0; }
+  .section-five .col {
+    padding-bottom: 1em; }
+    .section-five .col .title h3 {
+      padding: 1em 0; }
+    .section-five .col .form input, .section-five .col .form textarea {
+      font-size: 1.5em;
+      margin: 2em 0;
+      color: black; }
+    .section-five .col .form textarea {
+      resize: none;
+      height: 200px; }
+    .section-five .col .form button {
+      border: 1px solid white;
+      background-color: inherit;
+      color: white;
+      padding: 0.5em 3em;
+      font-size: 1.5em;
       transition: 0.5s ease; }
-      .section-five .col .social-row .social-col img:hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        border-radius: 100%;
-        transform: scale(1.1); }
+      .section-five .col .form button:hover {
+        background-color: rgba(89, 232, 200, 0.95);
+        color: black; }
+    .section-five .col .social-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .section-five .col .social-row .social-col {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .section-five .col .social-row .social-col img {
+          width: 25%;
+          cursor: pointer;
+          transition: 0.5s ease; }
+          .section-five .col .social-row .social-col img:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            border-radius: 100%;
+            transform: scale(1.1); }
+  .section-five .email {
+    padding-bottom: 1em; }
+    .section-five .email a h5 {
+      font-size: 2em;
+      color: black;
+      transition: 0.2s ease-in-out; }
+      .section-five .email a h5:hover {
+        border: 1px solid white;
+        border-radius: 2.5em;
+        padding: 0.5em; }
 
 /*================/
     MEDIA QUERIES
@@ -469,8 +476,10 @@ body {
     align-self: center; }
     .timeline-col p {
       border-bottom: 1px solid black; }
-  .section-three h3, .section-five h3 {
-    font-size: 1.3em; }
+  .section-three, .section-five {
+    padding: 2.5em; }
+    .section-three h3, .section-five h3 {
+      font-size: 2em; }
   .overlay:hover {
     background-color: rgba(14, 14, 14, 0.8); }
     .overlay:hover .overlay-title {
@@ -503,23 +512,24 @@ body {
     width: 250px;
     height: 250px;
     margin: 0; }
-  .social-row {
+  .section-four .col .title h3 {
+    font-size: 2em !important; }
+  .section-five a h5 {
+    font-size: 0.8em !important; }
+  .section-five .social-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding-top: 5em; }
-    .social-row .social-col {
+    width: 100%; }
+    .section-five .social-row .social-col {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .social-row .social-col h5 {
-        font-size: .4rem !important; }
-      .social-row .social-col img {
+      .section-five .social-row .social-col img {
         width: 35%;
         cursor: pointer;
         transition: 0.5s ease; }
-        .social-row .social-col img:hover {
+        .section-five .social-row .social-col img:hover {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
           border-radius: 100%;
           transform: scale(1.1); } }
