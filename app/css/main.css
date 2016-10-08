@@ -336,16 +336,20 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
-        .section-five .col .social-row .social-col img {
-          width: 25%;
+        .section-five .col .social-row .social-col a {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .section-five .col .social-row .social-col a img {
+          width: 35%;
           cursor: pointer;
           transition: 0.5s ease; }
-          .section-five .col .social-row .social-col img:hover {
+          .section-five .col .social-row .social-col a img:hover {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
             border-radius: 100%;
             transform: scale(1.1); }
   .section-five .email {
-    padding-bottom: 1em; }
+    padding-bottom: 5em; }
     .section-five .email a h5 {
       font-size: 2em;
       color: black;
@@ -513,9 +517,9 @@ body {
     height: 250px;
     margin: 0; }
   .section-four .col .title h3 {
-    font-size: 2em !important; }
+    font-size: 2.5em !important; }
   .section-five a h5 {
-    font-size: 0.8em !important; }
+    font-size: 1em !important; }
   .section-five .social-row {
     display: flex;
     justify-content: center;
@@ -525,11 +529,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .section-five .social-row .social-col img {
-        width: 35%;
+      .section-five .social-row .social-col a img {
+        width: 50% !important;
         cursor: pointer;
         transition: 0.5s ease; }
-        .section-five .social-row .social-col img:hover {
+        .section-five .social-row .social-col a img:hover {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
           border-radius: 100%;
           transform: scale(1.1); } }

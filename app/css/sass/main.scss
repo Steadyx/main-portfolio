@@ -401,8 +401,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-          width: 25%;
+
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        a img {
+          width: 35%;
           cursor: pointer;
           transition: 0.5s ease;
           &:hover {
@@ -415,7 +421,7 @@ body {
     }
   }
   .email {
-    padding-bottom: 1em;
+    padding-bottom: 5em;
     a h5 {
       font-size: 2em;
       color: black;
@@ -692,14 +698,14 @@ body {
     .col {
       .title {
         h3 {
-          font-size: 2em !important;
+          font-size: 2.5em !important;
         }
       }
     }
   }
   .section-five {
     a h5 {
-      font-size: 0.8em !important;
+      font-size: 1em !important;
     }
     .social-row {
       display: flex;
@@ -710,8 +716,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        img {
-          width: 35%;
+        a img {
+          width: 50% !important;
           cursor: pointer;
           transition: 0.5s ease;
           &:hover {
