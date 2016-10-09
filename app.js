@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use('/', express.static('app/views/'));
+app.use('/', express.static('app/views/minified/'));
 
 app.get('/', function(req, res, next) {
 

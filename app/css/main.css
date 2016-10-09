@@ -39,10 +39,15 @@ body {
 .section-one {
   height: 100vh;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-line-pack: center;
   align-content: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,11 +78,16 @@ body {
       font-size: 4em !important;
       text-shadow: 0 0 10px rgba(18, 18, 18, 0.7); }
   .section-one .col {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
+    -ms-flex: 1;
     flex: 1; }
     .section-one .col h3 {
       color: white;
@@ -89,30 +99,42 @@ body {
       letter-spacing: 0.1em; }
   .section-one .collection {
     border: none !important;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .section-one .collection .collection-item {
       margin: 0 1.5em !important;
       height: 130px;
       width: 130px;
       border-radius: 90%;
+      display: -ms-flexbox !important;
       display: flex !important;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-align: center;
       align-items: center;
       border: 1px solid black; }
 
 .social {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: #181818;
   width: 100%;
   color: white; }
 
 .col-social {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center; }
   .col-social .social-title {
     display: block;
@@ -133,22 +155,34 @@ body {
 
 .section-two, .section-three, .section-five, .section-four {
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 4.5em; }
   .section-two .col, .section-three .col, .section-four .col, .section-five .col {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-bottom: 5em; }
     .section-two .col .title, .section-three .col .title, .section-four .col .title, .section-five .col .title {
+      display: -ms-flexbox;
       display: flex;
       width: 100%;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-align: center;
       align-items: center; }
       .section-two .col .title .img-shadow, .section-three .col .title .img-shadow, .section-four .col .title .img-shadow, .section-five .col .title .img-shadow {
         position: relative;
@@ -177,16 +211,23 @@ body {
       font-size: 1.2em;
       line-height: 2em; }
   .section-two .timeline, .section-three .timeline, .section-five .timeline, .section-four .timeline, .section-three *.skill-set, .section-five *.skill-set {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-align: center;
     align-items: center;
     width: 90%;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-five .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col, .section-five *.skill-set .timeline-col {
       text-align: center; }
       .section-two .timeline .timeline-col .title, .section-three .timeline .timeline-col .title, .section-five .timeline .timeline-col .title, .section-four .timeline .timeline-col .title, .section-three *.skill-set .timeline-col .title, .section-five *.skill-set .timeline-col .title {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-align: center;
         align-items: center;
         text-align: center;
         font-size: 1.2em; }
@@ -201,9 +242,11 @@ body {
   background-color: #e4684c;
   color: black; }
   .section-three *.skill-set, .section-five *.skill-set {
+    -ms-flex-pack: center;
     justify-content: center; }
 
 *.skills-col {
+  -ms-flex: 1 0 25%;
   flex: 1 0 25%;
   text-align: left;
   border-right: 1px solid black;
@@ -228,12 +271,16 @@ body {
     background-color: 'rgba(89, 232, 200, 0.95)';
     padding: 0.5em;
     font-size: 1.2em;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center; }
   *.skills-col .title {
     font-size: 1.2em;
     border-bottom: 1px solid black;
+    -ms-flex-item-align: start;
     align-self: flex-start; }
     *.skills-col .title p {
       text-align: center; }
@@ -248,11 +295,16 @@ body {
     .section-four .col .title h3 {
       padding: 1em 0; }
     .section-four .col .webpage-row {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
+      -ms-flex-align: baseline;
       align-items: baseline; }
       .section-four .col .webpage-row .webpage {
+        -ms-flex: 1 0 40%;
         flex: 1 0 40%;
         height: auto;
         position: relative; }
@@ -267,10 +319,14 @@ body {
           top: 0;
           left: 0;
           transition: 0.5s ease;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-pack: end;
           justify-content: flex-end;
+          -ms-flex-align: center;
           align-items: center;
           background-color: rgba(18, 18, 18, 0.2);
+          -ms-flex-direction: column;
           flex-direction: column;
           transition: 0.5s ease; }
           .section-four .col .webpage-row .webpage .overlay:hover {
@@ -280,9 +336,13 @@ body {
             .section-four .col .webpage-row .webpage .overlay:hover .subtitle {
               transform: translateY(-80%); }
           .section-four .col .webpage-row .webpage .overlay .overlay-title {
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-pack: center;
             justify-content: center;
+            -ms-flex-align: center;
             align-items: center;
+            -ms-flex-item-align: center;
             align-self: center;
             transition: 0.5s ease; }
             .section-four .col .webpage-row .webpage .overlay .overlay-title p {
@@ -292,8 +352,11 @@ body {
               width: 100%;
               border-bottom: 1px solid white; }
           .section-four .col .webpage-row .webpage .overlay .subtitle {
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-pack: center;
             justify-content: center;
+            -ms-flex-align: center;
             align-items: center;
             text-align: center;
             transition: 0.6s ease; }
@@ -328,17 +391,26 @@ body {
         background-color: rgba(89, 232, 200, 0.95);
         color: black; }
     .section-five .col .social-row {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-align: center;
       align-items: center;
       width: 100%; }
       .section-five .col .social-row .social-col {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-align: center;
         align-items: center; }
         .section-five .col .social-row .social-col a {
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-pack: center;
           justify-content: center;
+          -ms-flex-align: center;
           align-items: center; }
         .section-five .col .social-row .social-col a img {
           width: 35%;
@@ -374,9 +446,12 @@ body {
     margin: 0 0.5em; }
   .section-two .timeline, .section-three .timeline, .section-five .timeline, .section-four .timeline, .section-three *.skill-set, .section-five *.skill-set {
     width: 100%;
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
     .section-two .timeline .timeline-col, .section-three .timeline .timeline-col, .section-five .timeline .timeline-col, .section-four .timeline .timeline-col, .section-three *.skill-set .timeline-col, .section-five *.skill-set .timeline-col {
       text-align: center;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center; }
       .section-two .timeline .timeline-col p, .section-three .timeline .timeline-col p, .section-five .timeline .timeline-col p, .section-four .timeline .timeline-col p, .section-three *.skill-set .timeline-col p, .section-five *.skill-set .timeline-col p {
         border-bottom: 1px solid black; }
@@ -387,8 +462,10 @@ body {
       width: 350px !important;
       height: 350px !important; }
   .webpage-row {
+    -ms-flex-direction: column;
     flex-direction: column; }
     .webpage-row .webpage {
+      -ms-flex: 1 0 40%;
       flex: 1 0 40%;
       height: auto;
       position: relative; }
@@ -407,8 +484,11 @@ body {
         font-size: 1em;
         border-bottom: 1px solid white; }
       .webpage-row .webpage .overlay .subtitle {
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-align: center;
         align-items: center;
         text-align: center;
         transition: 0.6s ease; }
@@ -418,6 +498,7 @@ body {
 
 @media (max-width: 1100px) {
   *.skill-set {
+    -ms-flex-direction: column;
     flex-direction: column; }
   *.skills-col {
     text-align: left;
@@ -442,7 +523,9 @@ body {
       background-color: 'rgba(89, 232, 200, 0.95)';
       padding: 0.5em;
       font-size: 1.2em;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-align: center;
       align-items: center; }
     *.skills-col .title p {
       text-align: center; } }
@@ -455,13 +538,14 @@ body {
     visibility: visible;
     margin-right: 1em !important; }
   .section-one .col h3 {
-    font-size: 1.5em; }
+    font-size: 1em !important;
+    letter-spacing: 0 !important; }
   .section-one .collection .collection-item {
-    height: 75px;
-    width: 75px;
+    height: 55px;
+    width: 55px;
     padding: 1em !important;
     font-size: 1em;
-    margin: 0 0.5em !important; }
+    margin: 0 .3em !important; }
   .section-one .learn-more p {
     font-size: 0.8em; }
   .section-two .section-two .col p, .section-three .section-two .col p, .section-two .section-three .col p, .section-three .section-three .col p, .section-four .section-two .col p, .section-four .section-three .col p, .section-two .section-four .col p, .section-three .section-four .col p, .section-four .section-four .col p, .section-five .section-two .col p, .section-five .section-three .col p, .section-two .section-five .col p, .section-three .section-five .col p, .section-five .section-five .col p, .section-four .section-five .col p, .section-five .section-four .col p {
@@ -477,6 +561,8 @@ body {
     border-radius: 0; }
   .timeline-col {
     text-align: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center; }
     .timeline-col p {
       border-bottom: 1px solid black; }
@@ -521,13 +607,19 @@ body {
   .section-five a h5 {
     font-size: 1em !important; }
   .section-five .social-row {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%; }
     .section-five .social-row .social-col {
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: center;
       justify-content: center;
+      -ms-flex-align: center;
       align-items: center; }
       .section-five .social-row .social-col a img {
         width: 50% !important;

@@ -19,6 +19,9 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-htmlmin": "^3.0.0",
     "nodemailer": "^2.6.4"
   }
 }
