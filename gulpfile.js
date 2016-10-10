@@ -87,10 +87,4 @@ gulp.task('compress', function(cb) {
 });
 
 
-gulp.task('img-compress', function() {
-  gulp.src(src.images)
-    .pipe(imagemin())
-    .pipe(gulp.dest(src.imgDest))
-});
-
-gulp.task('default', ['sass:watch', 'sass', 'serve', 'prefix', 'minify-css', 'html-minify', 'compress', 'img-compress']);
+gulp.task('default', ['sass:watch', 'sass', 'serve', 'prefix', 'minify-css', 'html-minify', 'compress']);
