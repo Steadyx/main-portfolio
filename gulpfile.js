@@ -3,7 +3,9 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   cleanCSS = require('gulp-clean-css'),
   autoprefixer = require('gulp-autoprefixer'),
-  htmlmin = require('gulp-htmlmin');
+  htmlmin = require('gulp-htmlmin'),
+  uglify = require('gulp-uglify'),
+  pump = require('pump');
 
 
 var src = {
@@ -12,8 +14,13 @@ var src = {
   htmlDest: './app/views/minified/',
   sass: './app/css/sass/*.scss',
   css: './app/css/',
+  js: './app/js/*.js',
+  minJS: './app/js/minJS/',
   prefixCss: './app/css/*.css',
-  minCss: './app/css/minified/'
+  minCss: './app/css/minified/',
+  images: './app/images/**/*',
+  imgDest: './app/images/min/'
+
 }
 
 gulp.task('serve', ['sass'], function() {
@@ -69,4 +76,21 @@ gulp.task('html-minify', function() {
     .pipe(gulp.dest(src.htmlDest));
 });
 
-gulp.task('default', ['sass:watch', 'sass', 'serve', 'prefix', 'minify-css', 'html-minify']);
+gulp.task('compress', function(cb) {
+  pump([
+      gulp.src(src.js),
+      uglify(),
+      gulp.dest(src.minJS)
+    ],
+    cb
+  );
+});
+
+
+gulp.task('img-compress', function() {
+  gulp.src(src.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(src.imgDest))
+});
+
+gulp.task('default', ['sass:watch', 'sass', 'serve', 'prefix', 'minify-css', 'html-minify', 'compress', 'img-compress']);

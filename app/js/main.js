@@ -54,8 +54,6 @@ $(document).ready(function(e) {
       width: $(this).attr('data-skills'),
       backgroundColor: 'rgba(89, 232, 200, 0.95)'
     })
-    console.log($(this).attr('data-skills'));
-    console.log($(this))
   });
 
   $('.dropdown-button').dropdown({
@@ -111,9 +109,7 @@ $(document).ready(function(e) {
     $(this).find('.skill-bar').css({
       width: $(this).attr('data-skills'),
       backgroundColor: 'rgba(89, 232, 200, 0.95)'
-    })
-    console.log($(this).attr('data-skills'));
-    console.log($(this))
+    });
   });
 
 
